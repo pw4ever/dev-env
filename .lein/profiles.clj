@@ -12,7 +12,7 @@
                   [lein-shell "0.4.0"]
                   [lein-localrepo "0.5.3"]
                   [lein-try "0.4.3"]
-                  [cider/cider-nrepl "0.8.0-SNAPSHOT"]]
+                  [cider/cider-nrepl "0.8.1"]]
 
         :dependencies [
                        [slamhound "1.5.5"]
