@@ -8,7 +8,6 @@ alias grep="grep --color"
 alias open="xdg-open"
 
 # local bin
-export PATH="$HOME/tools/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 # ccache
