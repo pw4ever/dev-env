@@ -33,7 +33,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git perl python gnu-utils systemd archlinux)
-plugins=(git git-extras git-remote-branch colorize colored-man cp ssh-agent torrent web-search copydir copyfile command-not-found perl python gnu-utils systemd archlinux lein)
+plugins=(adb archlinux cabal colored-man colorize command-not-found common-aliases copydir copyfile cp emacs gem git git-extras github gitignore git-prompt git-remote-branch gnu-utils history last-working-dir lein mvn per-directory-history perl repo ruby ssh-agent sudo systemd themes vim-interaction virtualenv zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
