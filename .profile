@@ -1,6 +1,7 @@
 source /etc/profile 
 
 #export TERM=xterm
+export EDITOR=gvim
 
 # aliases
 alias ls="ls --color=auto"
