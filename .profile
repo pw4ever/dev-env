@@ -7,6 +7,7 @@ export EDITOR=gvim
 alias ls="ls --color=auto"
 alias grep="grep --color"
 alias open="xdg-open"
+alias prime='DRI_PRIME=1'
 
 # local bin
 export PATH="$HOME/bin:$PATH"
