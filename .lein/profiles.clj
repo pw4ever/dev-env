@@ -12,7 +12,8 @@
                   [lein-shell "0.4.0"]
                   [lein-localrepo "0.5.3"]
                   [lein-try "0.4.3"]
-                  [cider/cider-nrepl "0.8.1"]]
+                  [cider/cider-nrepl "0.8.1"]
+                  [refactor-nrepl "0.2.2"]]
 
         :dependencies [
                        [slamhound "1.5.5"]
@@ -32,7 +33,7 @@
                   ;;:key-alias "pengw"
 
                   ;;:storepass ""
-                  ;;#:keypass ""
+                  ;;:keypass ""
                   }
 
         }
