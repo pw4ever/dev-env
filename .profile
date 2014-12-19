@@ -51,3 +51,8 @@ export ARENA="$HOME/arena/linux/"
 
 # Haskell cabal
 export PATH="$HOME/.cabal/bin:$PATH"
+
+# Clojure
+# https://github.com/technomancy/leiningen/wiki/Faster
+export LEIN_FAST_TRAMPOLINE=1
+#export LEIN_JVM_OPTS=  # disable tiered compilation, do full optimization; good for long running processes
