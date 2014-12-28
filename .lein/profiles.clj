@@ -29,6 +29,9 @@
                        [alembic "0.3.2"]
                        ]
 
+        ;; local JDK API javadoc
+        :resource-paths ["/usr/share/doc/java/api/"]
+
         :aliases {
                   "slamhound" ["run" "m" "slam.hound"]
                   }
