@@ -19,7 +19,7 @@ content=("${MAIN}")
 
 for index in $(seq 0 $(( ${#content[@]} - 1 ))) 
 do
-    ${WGET} -nc -nd -P ${DIR} "${URL_PREFIX}${content[$index]}"
+    ${WGET} -nv -nc -nd -P ${DIR} "${URL_PREFIX}${content[$index]}"
 done
 
 [ -f "${MAIN_JAR}" ] && java ${JVM_OPTS--Xmx2048m} -jar "${MAIN_JAR}" "$@"
