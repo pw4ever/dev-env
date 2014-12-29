@@ -1,7 +1,7 @@
 #! /bin/bash
 # Soot (https://sable.github.io/soot/) start-up script
 # author: Wei Peng <4pengw@gmail.com>
-# version: 20141228
+# version: 20141229
 # deps: bash, GNU coreutils, wget, procps-ng
 
 WGET='wget'
@@ -9,13 +9,17 @@ WGET='wget'
 # http://stackoverflow.com/a/246128
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-THE_URL='https://ssebuild.cased.de/nightly/soot/lib/soot-trunk.jar'
-THE_JAR=${DIR}/'soot-trunk.jar'
+URL_PREFIX='https://ssebuild.cased.de/nightly/soot/lib/'
 
-# download the jar if it is missing
-if ! [ -f "${THE_JAR}" ]; then
-    ${WGET} "${THE_URL}" -O "${THE_JAR}"
-fi
+MAIN='soot-trunk.jar'
+MAIN_JAR="${DIR}/${MAIN}"
 
-# by default, JVM maximal heap size (-Xmx) is set to be up to half of available memory
-[ -f ${THE_JAR} ] && java ${JVM_OPTS-$(free -k | awk '($7) {printf "-Xmx%dk", $7/2}')} -jar ${THE_JAR} "$@"
+declare -a content
+content=("${MAIN}")
+
+for index in $(seq 0 $(( ${#content[@]} - 1 ))) 
+do
+    ${WGET} -nc -nd -P ${DIR} "${URL_PREFIX}${content[$index]}"
+done
+
+[ -f "${MAIN_JAR}" ] && java ${JVM_OPTS--Xmx2048m} -jar "${MAIN_JAR}" "$@"
