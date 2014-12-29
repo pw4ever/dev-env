@@ -18,4 +18,4 @@ if ! [ -f "${THE_JAR}" ]; then
 fi
 
 # by default, JVM maximal heap size (-Xmx) is set to be up to half of available memory
-[ -f ${THE_JAR} ] && java ${JVM_OPTS-$(free | awk '($7) {printf "-Xmx%d", $7/2}')} -jar ${THE_JAR} "$@"
+[ -f ${THE_JAR} ] && java ${JVM_OPTS-$(free -k | awk '($7) {printf "-Xmx%dk", $7/2}')} -jar ${THE_JAR} "$@"
