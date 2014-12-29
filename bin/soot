@@ -1,0 +1,21 @@
+#! /bin/bash
+# Soot (https://sable.github.io/soot/) start-up script
+# author: Wei Peng <4pengw@gmail.com>
+# version: 20141128
+# deps: bash, GNU coreutils, wget, procps-ng
+
+WGET='wget'
+
+# http://stackoverflow.com/a/246128
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+THE_URL='https://ssebuild.cased.de/nightly/soot/lib/soot-trunk.jar'
+THE_JAR=${DIR}/'soot-trunk.jar'
+
+# download the jar if it is missing
+if ! [ -f "${THE_JAR}" ]; then
+    ${WGET} "${THE_URL}" -O "${THE_JAR}"
+fi
+
+# by default, JVM maximal heap size (-Xmx) is set to be up to half of available memory
+[ -f ${THE_JAR} ] && java ${JVM_OPTS:$(free | awk '($7) {printf "-Xmx%d", $7/2}')} -jar ${THE_JAR} "$@"
