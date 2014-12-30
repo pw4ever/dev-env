@@ -3,7 +3,10 @@
 # written by: Wei Peng <4pengw@gmail.com> 
 # version: 20141229
 
-find -type f -readable "$@" > src-files
-cat src-files | ctags -L-
-cat src-files | ctags -eL-
-cat src-files | cscope -bqi-
+CTAGS=${CTAGS-ctags}
+CSCOPE=${CSCOPE-cscope}
+
+find "$@" -type f -readable > src-files
+cat src-files | ${CTAGS} -L-
+cat src-files | ${CTAGS} -eL-
+cat src-files | ${CSCOPE} -bqi-

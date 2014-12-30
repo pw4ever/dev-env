@@ -4,6 +4,8 @@
 # version: 20141229
 # deps: bash, java
 
+JAVA=${JAVA-java}
+
 # http://stackoverflow.com/a/246128
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
@@ -17,4 +19,4 @@ else # if the first argument is not a port
     set -- ${JVM_OPTS--Xmx2048m} "$@"
 fi
 
-java "$@"
+${JAVA} "$@"

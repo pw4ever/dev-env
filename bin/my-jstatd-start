@@ -4,7 +4,9 @@
 # written by: Wei Peng <4pengw@gmail.com> 
 # version: 20141229
 
-jstatd -J-Djava.security.policy=/dev/stdin <<-'here-end'
+JSTATD=${JSTATD-jstatd}
+
+${JSTATD} -J-Djava.security.policy=/dev/stdin <<-'here-end'
 grant codebase "file:${java.home}/../lib/tools.jar" {
    permission java.security.AllPermission;
 };
