@@ -56,3 +56,6 @@ export PATH="$HOME/.cabal/bin:$PATH"
 # https://github.com/technomancy/leiningen/wiki/Faster
 export LEIN_FAST_TRAMPOLINE=1
 #export LEIN_JVM_OPTS=  # disable tiered compilation, do full optimization; good for long running processes
+
+# YourKit Java Profile
+export PATH="$PATH:$HOME/bin/yjp/bin/"
