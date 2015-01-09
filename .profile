@@ -12,6 +12,12 @@ alias prime='DRI_PRIME=1'
 # local bin
 export PATH="$HOME/bin:$PATH"
 
+# homedir locals
+export PATH="$HOME/local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
+export CPATH="$HOME/local/include:$CPATH"
+export MANPATH="$HOME/local/share/man:$MANPATH:$(manpath)"
+
 # ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export CCACHE_PATH="/usr/bin"
@@ -31,11 +37,6 @@ export PATH="$HOME/perl/bin:$PATH"
 
 # default browser
 export BROWSER="firefox"
-
-# setting search path for binaries, libraries, and headers 
-export PATH="$HOME/usr/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/usr/lib:$LD_LIBRARY_PATH"
-export CPATH="$HOME/usr/include:$CPATH"
 
 # android SDK
 android_sdk_root=$HOME/android-sdk
