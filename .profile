@@ -32,8 +32,7 @@ export PERL5LIB="$HOME/perl:$HOME/perl/lib/perl5:$PERL5LIB"
 export PATH="$HOME/perl/bin:$PATH"
 
 # local Ruby
-#dirs=($HOME/.gem/ruby/*/bin)
-#export PATH=${dirs[@]}:$PATH
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # default browser
 export BROWSER="firefox"
