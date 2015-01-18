@@ -33,6 +33,7 @@ export PATH="$HOME/perl/bin:$PATH"
 
 # local Ruby
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export rvm_ignore_gemrc_issues=1
 
 # default browser
 export BROWSER="firefox"
@@ -59,3 +60,7 @@ export LEIN_FAST_TRAMPOLINE=1
 
 # YourKit Java Profile
 export PATH="$PATH:$HOME/yjp/bin/"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
