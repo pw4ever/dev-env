@@ -99,11 +99,11 @@ set path+=~
 set foldcolumn=1
 set foldmethod=syntax
 
-" proper tab usage
-set tabstop=8
+" proper tab
+set tabstop=4
 set expandtab
 
-set cindent shiftwidth=4
+set cindent shiftwidth=2
 
 " set viminfo='1000,f1,<500,:100,@100,/100,%
 set viminfo='50,:100,f1,s100
