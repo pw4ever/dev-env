@@ -12,20 +12,16 @@ alias prime='DRI_PRIME=1'
 # local bin
 export PATH="$HOME/bin:$PATH"
 
-# homedir locals
-export PATH="$HOME/local/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
-export CPATH="$HOME/local/include:$CPATH"
-export MANPATH="$HOME/local/share/man:$MANPATH:$(manpath)"
+# homedir local installations (for scenario without the root privilege)
+export PATH="$HOME/local/bin:$HOME/usr/$(uname -m)/bin:$HOME/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/local/lib:$HOME/usr/$(uname -m)/lib:$HOME/usr/lib:$LD_LIBRARY_PATH"
+export CPATH="$HOME/local/include:$HOME/usr/$(uname -m)/include:$HOME/usr/include:$CPATH"
+export MANPATH="$HOME/local/share/man:$HOME/usr/$(uname -m)/share/man:$HOME/usr/share/man:$MANPATH:$(manpath)"
 
 # ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export CCACHE_PATH="/usr/bin"
 export CCACHE_DIR="$HOME/.ccache"
-
-# programs installed in (possibly shared) $HOME
-export PATH="$HOME/usr/$(uname -m)/bin:$PATH"
-export PATH="$HOME/usr/bin:$PATH"
 
 # local Perl5
 export PERL5LIB="$HOME/perl:$HOME/perl/lib/perl5:$PERL5LIB"
