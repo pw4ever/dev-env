@@ -60,4 +60,7 @@ export PATH="$PATH:$HOME/yjp/bin/"
 # https://wiki.archlinux.org/index.php/Metasploit_Framework#Setting_up_the_database
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
+# GNU Global 
+export GTAGSLABEL=pygments
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
