@@ -4,30 +4,31 @@
         
         :plugins [
                   ;; for Cider (Clojure IDE and Repl)
-                  [cider/cider-nrepl "0.8.1"]
+                  [cider/cider-nrepl "0.8.2"]
                   [refactor-nrepl "0.2.2"]
 
                   ;; other Clojure targets
-                  [lein-cljsbuild "1.0.3"]
-                  [lein-droid "0.2.3"]
+                  ;;[lein-cljsbuild "1.0.3"]
+                  ;;[lein-droid "0.2.3"]
 
+                  ;; better REPL
+                  ;;[venantius/ultra "0.1.9"] ;; collide with cider-nrepl
+                  
                   ;; misc plugins
                   [lein-localrepo "0.5.3"]
                   [lein-marginalia "0.8.0"]
                   [lein-javadoc "0.1.1"]
-                  [lein-ancient "0.5.5"]
-                  [lein-cprint "1.0.0"]
+                  [lein-ancient "0.6.1"]
                   [lein-pprint "1.1.2"]
-                  [lein-shell "0.4.0"]
-                  [lein-try "0.4.3"]
                   
                   ]
 
         :dependencies [
                        [slamhound "1.5.5"]
-                       [compliment "0.2.0"]
                        [alembic "0.3.2"]
                        ]
+
+        ;;:ultra {:color-scheme :solarized_dark}
 
         ;; local JDK API javadoc
         :resource-paths ["/usr/share/doc/java/api/"]
