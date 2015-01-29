@@ -1,0 +1,23 @@
+#!/bin/bash - 
+# Soot (https://sable.github.io/soot/) start-up script
+# author: Wei Peng <4pengw@gmail.com>
+# version: 20141229
+# deps: bash, GNU coreutils, wget, procps-ng
+
+apk=${1}
+
+# http://stackoverflow.com/a/246128
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+if ! [[ -n apk ]]; then
+  echo "$0 <apk filename>" > /dev/stderr
+  exit 1
+fi
+
+out=$(basename $apk .apk)
+
+if [[ $out == $apk ]]; then
+  out="${out}-out"
+fi
+
+soot -f J --src-prec apk --process-path "$apk" --force-android-jar "${DIR}/android.jar" --allow-phantom-refs -d ${out}
