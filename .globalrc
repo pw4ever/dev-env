@@ -44,7 +44,7 @@ common:\
 #
 gtags:\
 	:tc=common:\
-	:tc=builtin-parser:
+	:tc=pygments:
 builtin-parser:\
 	:langmap=c\:.c.h,yacc\:.y,asm\:.s.S,java\:.java,cpp\:.c++.cc.hh.cpp.cxx.hxx.hpp.C.H,php\:.php.php3.phtml:
 #
