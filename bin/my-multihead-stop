@@ -2,4 +2,4 @@
 
 xrandr --output VIRTUAL2 --off
 pkill -f 'intel-virtual-output'
-sudo pkill -f 'Xorg.bin :8'
+sudo pkill -f 'Xorg.*:8'
