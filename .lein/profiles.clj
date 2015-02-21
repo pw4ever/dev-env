@@ -12,7 +12,7 @@
                   ;;[lein-droid "0.2.3"]
 
                   ;; better REPL
-                  ;;[venantius/ultra "0.1.9"] ;; collide with cider-nrepl
+                  [venantius/ultra "0.2.0"]
                   
                   ;; misc plugins
                   [lein-localrepo "0.5.3"]
@@ -28,7 +28,12 @@
                        [alembic "0.3.2"]
                        ]
 
-        ;;:ultra {:color-scheme :solarized_dark}
+        ;; https://github.com/venantius/ultra/issues/13
+        :ultra {:repl false
+                :stacktraces true
+                :tests true
+                :java true
+                :color-scheme :solarized_dark}
 
         ;; local JDK API javadoc
         :resource-paths ["/usr/share/doc/java/api/"]
