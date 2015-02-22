@@ -12,7 +12,7 @@
                   ;;[lein-droid "0.2.3"]
 
                   ;; better REPL
-                  [venantius/ultra "0.2.0"]
+                  [venantius/ultra "0.2.1"]
                   
                   ;; misc plugins
                   [lein-localrepo "0.5.3"]
@@ -29,7 +29,7 @@
                        ]
 
         ;; https://github.com/venantius/ultra/issues/13
-        :ultra {:repl false
+        :ultra {:repl true
                 :stacktraces true
                 :tests true
                 :java true
