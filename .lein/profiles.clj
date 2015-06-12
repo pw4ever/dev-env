@@ -5,7 +5,7 @@
         :plugins [
                   ;; for Cider (Clojure IDE and Repl)
                   [cider/cider-nrepl "0.8.2"]
-                  [refactor-nrepl "0.2.2"]
+                  [refactor-nrepl "1.0.5"]
 
                   ;; other Clojure targets
                   ;;[lein-cljsbuild "1.0.3"]
@@ -36,7 +36,7 @@
                 :color-scheme :solarized_dark}
 
         ;; local JDK API javadoc
-        :resource-paths ["/usr/share/doc/java/api/"]
+        :resource-paths ["/usr/share/doc/java/jdk/api/"]
 
         :aliases {
                   "slamhound" ["run" "m" "slam.hound"]
