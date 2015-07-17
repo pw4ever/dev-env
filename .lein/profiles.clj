@@ -4,8 +4,8 @@
         
         :plugins [
                   ;; for Cider (Clojure IDE and Repl)
-                  [cider/cider-nrepl "0.8.2"]
-                  [refactor-nrepl "1.0.5"]
+                  [cider/cider-nrepl "0.9.1"]
+                  [refactor-nrepl "1.1.0"]
 
                   ;; other Clojure targets
                   ;;[lein-cljsbuild "1.0.3"]
@@ -36,7 +36,15 @@
                 :color-scheme :solarized_dark}
 
         ;; local JDK API javadoc
-        :resource-paths ["/usr/share/doc/java/jdk/api/"]
+        ;; use Leiningen profile read-eval trick
+        ;; https://github.com/technomancy/leiningen/blob/master/doc/PROFILES.md#dynamic-eval
+        :resource-paths [#=(eval (clojure.string/join (System/getProperty "file.separator")
+                                                      [(System/getProperty "user.home")
+                                                       "Documents"
+                                                       "jdk-8u51-docs-all"
+                                                       "docs"
+                                                       "api"]))
+                         "/usr/share/doc/java/jdk/api/"]
 
         :aliases {
                   "slamhound" ["run" "m" "slam.hound"]
