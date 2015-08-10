@@ -8,13 +8,14 @@
                   [refactor-nrepl "1.1.0"]
 
                   ;; other Clojure targets
-                  ;;[lein-cljsbuild "1.0.3"]
+                  [lein-cljsbuild "1.0.6"]
                   ;;[lein-droid "0.2.3"]
 
                   ;; better REPL
-                  [venantius/ultra "0.2.1"]
+                  [venantius/ultra "0.3.4"]
                   
                   ;; misc plugins
+                  [lein-ring "0.9.6"]
                   [lein-localrepo "0.5.3"]
                   [lein-marginalia "0.8.0"]
                   [lein-javadoc "0.1.1"]
