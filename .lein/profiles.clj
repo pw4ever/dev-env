@@ -3,10 +3,6 @@
  :user {
         
         :plugins [
-                  ;; for Cider (Clojure IDE and Repl)
-                  [cider/cider-nrepl "0.9.1"]
-                  [refactor-nrepl "1.1.0"]
-
                   ;; other Clojure targets
                   [lein-cljsbuild "1.0.6"]
                   ;;[lein-droid "0.2.3"]
@@ -25,6 +21,13 @@
                   ]
 
         :dependencies [
+                       ;; for CIDER - Clojure(Script) IDE
+                       [cider/cider-nrepl "0.9.1"]
+                       [refactor-nrepl "1.1.0"]
+                       [org.clojure/tools.nrepl "0.2.10"]
+                       [com.cemerick/piggieback "0.2.1"]
+                       [weasel "0.7.0"]
+
                        [slamhound "1.5.5"]
                        [alembic "0.3.2"]
                        ]
