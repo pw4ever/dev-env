@@ -27,6 +27,7 @@
 
         :dependencies [
                        ;; for ClojureScript REPL
+                       [org.clojure/clojurescript "1.7.48"]
                        [com.cemerick/piggieback "0.2.1"]
                        [weasel "0.7.0"]
 
