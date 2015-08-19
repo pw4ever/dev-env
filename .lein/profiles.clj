@@ -35,6 +35,9 @@
                        [alembic "0.3.2"]
                        ]
 
+        ;; https://github.com/cemerick/piggieback
+        :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+
         ;; https://github.com/venantius/ultra/issues/13
         :ultra {:repl true
                 :stacktraces true
