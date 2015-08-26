@@ -34,7 +34,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git perl python gnu-utils systemd archlinux)
 #plugins=(adb archlinux cabal colored-man colorize command-not-found common-aliases copydir copyfile cp dircycle dirhistory emacs gem git git-extras github gitignore git-prompt git-remote-branch gnu-utils history last-working-dir lein mvn per-directory-history perl repo ruby ssh-agent sudo systemd themes vim-interaction virtualenv zsh_reload)
-plugins=(archlinux cabal colored-man colorize command-not-found common-aliases copydir copyfile cp dircycle dirhistory gem git git-extras github gitignore git-prompt git-remote-branch gnu-utils history lein mvn per-directory-history perl repo ruby ssh-agent sudo systemd themes vim-interaction virtualenv zsh_reload)
+plugins=(archlinux cabal colored-man colorize command-not-found common-aliases copydir copyfile cp dircycle dirhistory gem git git-extras github gitignore git-prompt git-remote-branch gnu-utils history lein mvn perl repo ruby ssh-agent sudo systemd themes vagrant vim-interaction virtualenv zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,3 +48,5 @@ PROMPT='%{$fg_bold[red]%}%? %{$fg[cyan]%}%c %{$reset_color%}'
 PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[red]%}@%{$fg_bold[green]%}%m $PROMPT"
 
 source $HOME/.profile
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
