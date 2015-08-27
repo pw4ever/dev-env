@@ -61,6 +61,6 @@ export PATH="$PATH:$HOME/yjp/bin/"
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 # GNU Global 
-export GTAGSLABEL=pygments
+#export GTAGSLABEL=pygments
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
