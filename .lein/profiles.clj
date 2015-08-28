@@ -51,7 +51,7 @@
         :resource-paths [#=(eval (clojure.string/join (System/getProperty "file.separator")
                                                       [(System/getProperty "user.home")
                                                        "Documents"
-                                                       "jdk-8u51-docs-all"
+                                                       "jdk"
                                                        "docs"
                                                        "api"]))
                          "/usr/share/doc/java/jdk/api/"]
