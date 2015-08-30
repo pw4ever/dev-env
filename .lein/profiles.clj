@@ -54,7 +54,7 @@
                                                        "jdk"
                                                        "docs"
                                                        "api"]))
-                         "/usr/share/doc/java/jdk/api/"]
+                         "/usr/share/doc/java/api/"]
 
         :aliases {
                   "slamhound" ["run" "m" "slam.hound"]
