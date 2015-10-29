@@ -36,7 +36,10 @@
                        ]
 
         ;; https://github.com/cemerick/piggieback
-        :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+        :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]
+                       :init (do
+                               (use 'clojure.pprint
+                                    'clojure.stacktrace))}
 
         ;; https://github.com/venantius/ultra/issues/13
         :ultra {:repl true
