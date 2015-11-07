@@ -23,6 +23,11 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 export CCACHE_PATH="/usr/bin"
 export CCACHE_DIR="$HOME/.ccache"
 
+# go
+export GOPATH="$HOME/go"
+[[ -d "$GOPATH" ]] || mkdir -p "$GOPATH"
+export PATH="$GOPATH/bin:$PATH"
+
 # local Perl5
 export PERL5LIB="$HOME/perl:$HOME/perl/lib/perl5:$PERL5LIB"
 export PATH="$HOME/perl/bin:$PATH"
@@ -61,6 +66,6 @@ export PATH="$PATH:$HOME/yjp/bin/"
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 # GNU Global 
-#export GTAGSLABEL=pygments
+export GTAGSLABEL=pygments
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
