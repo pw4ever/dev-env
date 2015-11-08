@@ -29,7 +29,11 @@ export CCACHE_DIR="$HOME/.ccache"
 # go
 local MY="$HOME/go"
 [[ -d "$MY" ]] || mkdir -p "$MY"
-export GOPATH=$(my_join : "$MY" "$GOPATH")
+if [[ "x$GOPATH" == "x" ]]; then
+  export GOPATH="$MY"
+else
+  export GOPATH="$MY:$GOPATH"
+fi
 export PATH="$MY/bin:$PATH"
 unset MY
 
