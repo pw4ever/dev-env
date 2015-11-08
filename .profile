@@ -1,5 +1,8 @@
 source /etc/profile 
 
+# help functions
+function my_join { local IFS="$1"; shift; echo "$*"; }
+
 #export TERM=xterm
 export EDITOR=gvim
 
@@ -24,9 +27,11 @@ export CCACHE_PATH="/usr/bin"
 export CCACHE_DIR="$HOME/.ccache"
 
 # go
-export GOPATH="$HOME/go"
-[[ -d "$GOPATH" ]] || mkdir -p "$GOPATH"
-export PATH="$GOPATH/bin:$PATH"
+local MY="$HOME/go"
+[[ -d "$MY" ]] || mkdir -p "$MY"
+export GOPATH=$(my_join : "$MY" "$GOPATH")
+export PATH="$MY/bin:$PATH"
+unset MY
 
 # local Perl5
 export PERL5LIB="$HOME/perl:$HOME/perl/lib/perl5:$PERL5LIB"
