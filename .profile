@@ -78,3 +78,6 @@ alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 export GTAGSLABEL=pygments
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Leiningen
+export LEIN_ROOT="1"  # allow root to use Leiningen
