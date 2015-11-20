@@ -1,4 +1,4 @@
-# https://www.linode.com/docs/security/securing-your-server/
+## https://www.linode.com/docs/security/securing-your-server/
 
 *filter
 
@@ -32,6 +32,13 @@
 # for forwarding (optional but useful).
 -A FORWARD -m limit --limit 5/min -j LOG --log-prefix "iptables_FORWARD_denied: " --log-level 7
 
+# Allow incoming Longview connections.
+-A INPUT -s longview.linode.com -m state --state NEW -j ACCEPT
+
+# Allow incoming NodeBalancer connections.
+-A INPUT -s 192.168.255.0/24 -m state --state NEW -j ACCEPT
+
+## older config
 #-A INPUT -p tcp -j REJECT --reject-with tcp-reset 
 #-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable 
 #-A INPUT -j REJECT --reject-with icmp-host-unreachable 
