@@ -9,7 +9,8 @@
                   [org.clojure/tools.nrepl "0.2.10"]
 
                   ;; other Clojure targets
-                  [lein-cljsbuild "1.0.6"]
+                  [lein-cljsbuild "1.1.1"]
+                  [lein-figwheel "0.5.0-1"]
                   ;;[lein-droid "0.2.3"]
 
                   ;; better REPL
@@ -27,7 +28,7 @@
 
         :dependencies [
                        ;; for ClojureScript REPL
-                       [org.clojure/clojurescript "1.7.48"]
+                       [org.clojure/clojurescript "1.7.170"]
                        [com.cemerick/piggieback "0.2.1"]
                        [weasel "0.7.0"]
 
